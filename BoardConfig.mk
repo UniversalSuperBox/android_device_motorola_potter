@@ -116,7 +116,8 @@ BOARD_USES_QCNE := true
 ENABLE_CPUSETS := true
 
 # Crypto
-TARGET_HW_DISK_ENCRYPTION := true
+# Disabled to avoid `'cryptfs_hw.h' file not found`.
+TARGET_HW_DISK_ENCRYPTION := false
 
 # Display
 HAVE_ADRENO_SOURCE:= false
@@ -131,7 +132,7 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 
 # FM
-BOARD_HAVE_QCOM_FM := true
+BOARD_HAVE_QCOM_FM := false
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
