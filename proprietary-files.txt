@@ -20,7 +20,6 @@ bin/mm-qcamera-daemon
 bin/motosh
 bin/netmgrd
 bin/pm-proxy
-bin/pm-service
 bin/ptt_socket_app
 bin/qmi_motext_hook
 bin/qseecomd
