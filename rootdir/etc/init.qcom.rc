@@ -465,11 +465,12 @@ on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
 #start camera server as daemon
-service qcamerasvr /system/bin/mm-qcamera-daemon
-    class late_start
-    user camera
-    group camera system inet input graphics
-    writepid /dev/cpuset/system-background/tasks
+#TODO: Temporarily disabled to make logcat more quiet.
+#service qcamerasvr /system/bin/mm-qcamera-daemon
+#    class late_start
+#    user camera
+#    group camera system inet input graphics
+#    writepid /dev/cpuset/system-background/tasks
 
 service cnd /system/bin/cnd
     class main
@@ -492,10 +493,10 @@ service wcnss-service /system/bin/wcnss_service
     group system wifi radio
     oneshot
 
-service adsprpcd /system/bin/adsprpcd
-    class main
-    user media
-    group media
+#service adsprpcd /system/bin/adsprpcd
+#    class main
+#    user media
+#    group media
 
 # Start AKM executable
 service ecompassd /system/bin/akmd09912
@@ -833,10 +834,11 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     user root
     oneshot
 
-service atfwd /system/bin/ATFWD-daemon
-    class late_start
-    user system
-    group system radio
+# According to XDA, this is for Wi-Fi display. I don't know if that's correct. Either way, it's crashing a lot. Commenting it out will make it be quiet for early debugging.
+#service atfwd /system/bin/ATFWD-daemon
+#    class late_start
+#    user system
+#    group system radio
 
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
