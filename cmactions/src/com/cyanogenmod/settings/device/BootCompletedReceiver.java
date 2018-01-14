@@ -29,6 +29,7 @@ import android.util.Log;
 import cyanogenmod.providers.CMSettings;
 
 import com.cyanogenmod.settings.device.ServiceWrapper.LocalBinder;
+import com.cyanogenmod.settings.device.util.FileUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     static final String TAG = "CMActions";
@@ -40,7 +41,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         Log.i(TAG, "Booting");
 
         // Restore nodes to saved preference values
-        for (String pref : Constants.sButtonPrefKeys) {
+        for (String pref : Constants.sPrefKeys) {
              Constants.writePreference(context, pref);
         }
 

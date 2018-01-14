@@ -7,6 +7,7 @@
 
 # Binaries
 /system/bin/adspd                                        u:object_r:adspd_exec:s0
+/system/bin/charge_only_mode                             u:object_r:charge_only_exec:s0
 /system/bin/hci_qcomm_init                               u:object_r:config_bluetooth_exec:s0
 /system/bin/init\.mmi\.boot\.sh                          u:object_r:mmi_boot_exec:s0
 /system/bin/init\.mmi\.laser\.sh                         u:object_r:mmi_laser_exec:s0
@@ -21,6 +22,9 @@
 
 # CMActions
 /sys/homebutton(/.*)?                                    u:object_r:sysfs_homebutton:s0
+
+# Motorola services
+/data/chargeonlymode(/.*)?                               u:object_r:chargeonly_data_file:s0
 
 # Fingerprint
 /data/.fps(/.*)?                                         u:object_r:fingerprintd_data_file:s0
@@ -116,3 +120,9 @@
 
 # WCNSS
 /sys/module/wcnsscore/parameters(/.*)?                   u:object_r:sysfs_wcnsscore:s0
+
+# Screen off gestures
+/sys/android_touch/gesture_swipe_right                   u:object_r:sysfs_screen_off_gestures:s0
+/sys/android_touch/gesture_swipe_left                    u:object_r:sysfs_screen_off_gestures:s0
+/sys/android_touch/gesture_swipe_down                    u:object_r:sysfs_screen_off_gestures:s0
+/sys/android_touch/gesture_swipe_up                      u:object_r:sysfs_screen_off_gestures:s0
