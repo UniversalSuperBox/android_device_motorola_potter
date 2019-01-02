@@ -1,8 +1,5 @@
 # Proprietary files for potter
 
--app/datastatusnotification/datastatusnotification.apk
--app/embms/embms.apk
--app/TimeService/TimeService.apk
 bin/adspd
 bin/adsprpcd
 bin/batt_health
@@ -112,13 +109,7 @@ etc/permissions/izat.xt.srv.xml
 etc/permissions/mot_dtv_permissions.xml
 etc/permissions/qcrilhook.xml
 etc/permissions/qti_permissions.xml
--framework/com.qti.snapdragon.sdk.display.jar
--framework/embmslibrary.jar
--framework/imscmlibrary.jar
--framework/izat.xt.srv.jar
--framework/qcrilhook.jar
--framework/qti-telephony-common.jar
-lib/hw/camera.msm8953.so
+lib/hw/camera.vendor.msm8953.so
 lib/hw/fingerprint.msm8953.so
 lib/hw/sensorhub.msm8953.so
 lib/hw/sensors.msm8953.so
@@ -157,16 +148,6 @@ lib/libqomx_core.so
 -lib/libril.so
 lib/libsensorhub.so
 lib/libYuvSkia.so
--priv-app/atfwd/atfwd.apk
--priv-app/CNEService/CNEService.apk
--priv-app/com.qualcomm.location/com.qualcomm.location.apk
--priv-app/DTVPlayer/DTVPlayer.apk|de470ab2bef4948feb331524e21fead680b67aba
--priv-app/DTVService/DTVService.apk
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
--priv-app/QtiTetherService/QtiTetherService.apk
--vendor/app/colorservice/colorservice.apk
--vendor/app/ims/ims.apk
--vendor/app/imssettings/imssettings.apk
 vendor/bin/audioflacapp
 vendor/bin/esepmdaemon
 vendor/bin/mm-pp-dpps
@@ -216,8 +197,6 @@ vendor/lib/libaudioalsa.so
 vendor/lib/libaudioparsers.so
 vendor/lib/libavenhancements.so
 vendor/lib/libbccQTI.so
-vendor/lib/libbtnv.so
-vendor/lib/libbt-vendor.so
 vendor/lib/libC2D2.so
 vendor/lib/libc2d30_bltlib.so
 vendor/lib/libc2d30-a3xx.so
