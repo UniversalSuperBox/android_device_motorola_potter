@@ -329,11 +329,13 @@ service mmi-touch-sh /system/bin/init.mmi.touch.sh
     user root
     oneshot
 
-service oem-hw-sh /system/bin/init.oem.hw.sh
-    seclabel u:r:oem-hw-sh:s0
-    class core
-    user root
-    oneshot
+# Just waits for devices to complete... we have udev handling its job.
+#service oem-hw-sh /system/bin/init.oem.hw.sh
+#    seclabel u:r:oem-hw-sh:s0
+#    class core
+#    user root
+#    oneshot
+
 
 # Start Sensor daemon
 service motosh /system/bin/motosh boot
